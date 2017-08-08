@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android                   ="http://schemas.android.com/apk/res/android"
+    xmlns:card_view                 ="http://schemas.android.com/apk/res-auto"
+    android:id                      ="@+id/linear_layout"
+    android:orientation             ="vertical"
+    android:layout_width            ="match_parent"
+    android:layout_height           ="wrap_content"
+    android:animateLayoutChanges    ="true">
+
+    <android.support.v7.widget.CardView
+        android:layout_gravity          ="center"
+        android:layout_width            ="match_parent"
+        android:layout_height           ="wrap_content"
+        card_view:cardUseCompatPadding  ="true"
+        card_view:cardBackgroundColor   ="@android:color/white"
+        card_view:cardCornerRadius      ="5dp">
+
+        <LinearLayout
+            android:id              ="@+id/route_change_layout"
+            android:layout_width    ="match_parent"
+            android:layout_height   ="wrap_content"
+            android:orientation     ="horizontal"
+            android:padding         ="10dp"
+            android:background      ="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id                      ="@+id/route_change_image_view"
+                android:layout_width            ="75dp"
+                android:layout_height           ="75dp"
+                android:src                     ="@drawable/route_change_type_1"/>
+
+            <LinearLayout
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:layout_marginLeft   ="10dp"
+                android:orientation         ="vertical">
+
+                <TextView
+                    android:id                  ="@+id/title_text_view"
+                    android:layout_width        ="wrap_content"
+                    android:layout_height       ="wrap_content"
+                    android:text                ="Допълнителен курс на 118А от 10.07.2017 г."
+                    android:textColor           ="@android:color/black"
+                    android:layout_marginBottom ="8dp"/>
+
+                <TextView
+                    android:id                  ="@+id/message_text_view"
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="wrap_content"
+                    android:textSize            ="12sp"
+                    android:maxLines            ="2"
+                    android:ellipsize           ="end"
+                    android:text                ="Считано от 10.07.2017 г., курс в 06:24 от Почивка ще обслужва през Гробищен парк, запазва се курса в 07:25 от Тополи.Важи само за делнично разписание."/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

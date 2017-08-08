@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android           ="http://schemas.android.com/apk/res/android"
+    xmlns:app               ="http://schemas.android.com/apk/res-auto"
+    android:layout_width    ="match_parent"
+    android:layout_height   ="match_parent"
+    android:orientation     ="vertical">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id              ="@+id/drawer_layout"
+        android:layout_width    ="match_parent"
+        android:layout_height   ="match_parent">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width    ="match_parent"
+            android:layout_height   ="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:orientation     ="vertical"
+                android:layout_width    ="match_parent"
+                android:layout_height   ="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                    android:layout_width    ="match_parent"
+                    android:layout_height   ="?attr/actionBarSize"
+                    app:contentInsetLeft    ="0dp"
+                    app:contentInsetStart   ="0dp"
+                    app:layout_collapseMode ="pin"
+                    app:layout_scrollFlags  ="scroll|enterAlways">
+
+                    <RelativeLayout
+                        android:layout_width    ="match_parent"
+                        android:layout_height   ="match_parent">
+
+                        <ImageView
+                            android:id                      ="@+id/menu_image_view"
+                            android:layout_width            ="wrap_content"
+                            android:layout_height           ="wrap_content"
+                            android:padding                 ="16dp"
+                            android:layout_centerVertical   ="true"
+                            android:src                     ="@drawable/menu_icon"
+                            android:background              ="?android:attr/actionBarItemBackground"/>
+
+                        <TextView
+                            android:layout_width            ="wrap_content"
+                            android:layout_height           ="wrap_content"
+                            android:text                    ="Градски Транспорт Варна"
+                            android:textColor               ="@android:color/white"
+                            android:textSize                ="18sp"
+                            android:layout_centerInParent   ="true"/>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+                <android.support.design.widget.TabLayout
+                    android:id                  ="@+id/tab_layout"
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="?attr/actionBarSize"
+                    app:tabIndicatorHeight      ="2dp"
+                    app:tabIndicatorColor       ="@android:color/white"
+                    app:tabMode                 ="fixed"
+                    app:tabGravity              ="fill"
+                    app:tabTextColor            ="@android:color/white"
+                    app:tabSelectedTextColor    ="@android:color/white" />
+
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id              ="@+id/view_pager"
+                android:layout_width    ="match_parent"
+                android:layout_height   ="match_parent"
+                app:layout_behavior     ="@string/appbar_scrolling_view_behavior" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id              ="@+id/bus_fab"
+                android:layout_width    ="wrap_content"
+                android:layout_height   ="wrap_content"
+                android:layout_margin   ="16dp"
+                android:layout_gravity  ="end|bottom"
+                android:src             ="@drawable/bus_icon"
+                app:backgroundTint      ="@color/colorPrimary"
+                app:elevation           ="6dp"
+                app:fabSize             ="normal"/>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <RelativeLayout
+            android:id              ="@+id/drawer_view"
+            android:layout_width    ="match_parent"
+            android:layout_height   ="match_parent"
+            android:layout_gravity  ="start"
+            android:clickable       ="true">
+
+            <include
+                android:layout_width    ="match_parent"
+                android:layout_height   ="match_parent"
+                layout                  ="@layout/menu_drawer" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <com.gradski.transport.varna.globalClasses.RevealLayout
+        android:id              ="@+id/reveal_layout"
+        android:layout_width    ="match_parent"
+        android:layout_height   ="match_parent"
+        android:visibility      ="invisible">
+
+        <View
+            android:id              ="@+id/reveal_layout_view"
+            android:layout_width    ="match_parent"
+            android:layout_height   ="match_parent"
+            android:background      ="@color/colorPrimary"
+            android:visibility      ="invisible"/>
+
+    </com.gradski.transport.varna.globalClasses.RevealLayout>
+
+</RelativeLayout>

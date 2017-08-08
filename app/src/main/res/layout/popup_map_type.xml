@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android           ="http://schemas.android.com/apk/res/android"
+    android:orientation     ="vertical"
+    android:layout_width    ="match_parent"
+    android:layout_height   ="match_parent"
+    android:background      ="@color/colorPrimary">
+
+    <Button
+        android:id              ="@+id/normal_button"
+        android:layout_width    ="180dip"
+        android:layout_height   ="50dip"
+        android:background      ="?attr/selectableItemBackground"
+        android:gravity         ="center"
+        android:text            ="Нормална карта"
+        android:textAllCaps     ="false"
+        android:textColor       ="@android:color/white"
+        android:textSize        ="16sp" />
+
+    <View
+        android:layout_width    ="180dip"
+        android:layout_height   ="1dp"
+        android:background=     "@android:color/white"/>
+
+    <Button
+        android:id              ="@+id/satellite_button"
+        android:layout_width    ="180dip"
+        android:layout_height   ="50dip"
+        android:text            ="Сателитна карта"
+        android:textAllCaps     ="false"
+        android:textColor       ="@android:color/white"
+        android:textSize        ="16sp"
+        android:gravity         ="center"
+        android:background      ="?attr/selectableItemBackground"/>
+
+    <View
+        android:layout_width    ="180dip"
+        android:layout_height   ="1dp"
+        android:background=     "@android:color/white"/>
+
+    <Button
+        android:id              ="@+id/terrain_button"
+        android:layout_width    ="180dip"
+        android:layout_height   ="50dip"
+        android:text            ="Карта на терена"
+        android:textAllCaps     ="false"
+        android:textColor       ="@android:color/white"
+        android:textSize        ="16sp"
+        android:gravity         ="center"
+        android:background      ="?attr/selectableItemBackground"/>
+
+    <View
+        android:layout_width    ="180dip"
+        android:layout_height   ="1dp"
+        android:background=     "@android:color/white"/>
+
+    <Button
+        android:id              ="@+id/hybrid_button"
+        android:layout_width    ="180dip"
+        android:layout_height   ="50dip"
+        android:text            ="Хибридна карта"
+        android:textAllCaps     ="false"
+        android:textColor       ="@android:color/white"
+        android:textSize        ="16sp"
+        android:gravity         ="center"
+        android:background      ="?attr/selectableItemBackground"/>
+
+</LinearLayout>

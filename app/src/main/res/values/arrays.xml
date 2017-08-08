@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="certificates_array">
+        <item>@drawable/certificate_1</item>
+    </integer-array>
+
+    <integer-array name="galleries_array">
+        <item>@drawable/gallery_image1</item>
+        <item>@drawable/gallery_image2</item>
+        <item>@drawable/gallery_image3</item>
+        <item>@drawable/gallery_image4</item>
+        <item>@drawable/gallery_image5</item>
+        <item>@drawable/gallery_image6</item>
+        <item>@drawable/gallery_image7</item>
+        <item>@drawable/gallery_image8</item>
+        <item>@drawable/gallery_image9</item>
+        <item>@drawable/gallery_image10</item>
+        <item>@drawable/gallery_image12</item>
+        <item>@drawable/gallery_image13</item>
+        <item>@drawable/gallery_image14</item>
+        <item>@drawable/gallery_image15</item>
+        <item>@drawable/gallery_image16</item>
+        <item>@drawable/gallery_image17</item>
+        <item>@drawable/gallery_image18</item>
+        <item>@drawable/gallery_image19</item>
+        <item>@drawable/gallery_image20</item>
+        <item>@drawable/gallery_image21</item>
+        <item>@drawable/gallery_image22</item>
+        <item>@drawable/gallery_image23</item>
+        <item>@drawable/gallery_image24</item>
+        <item>@drawable/gallery_image25</item>
+        <item>@drawable/gallery_image26</item>
+        <item>@drawable/gallery_image27</item>
+        <item>@drawable/gallery_image28</item>
+        <item>@drawable/gallery_image29</item>
+        <item>@drawable/gallery_image30</item>
+        <item>@drawable/gallery_image31</item>
+        <item>@drawable/gallery_image32</item>
+        <item>@drawable/gallery_image33</item>
+        <item>@drawable/gallery_image34</item>
+        <item>@drawable/gallery_image35</item>
+        <item>@drawable/gallery_image36</item>
+        <item>@drawable/gallery_image37</item>
+        <item>@drawable/gallery_image38</item>
+    </integer-array>
+</resources>

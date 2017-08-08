@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android           ="http://schemas.android.com/apk/res/android"
+    android:layout_width    ="match_parent"
+    android:layout_height   ="match_parent"
+    android:orientation     ="vertical"
+    android:background      ="@color/colorPrimary">
+
+    <ScrollView
+        android:id              ="@+id/scroll_view"
+        android:layout_width    ="match_parent"
+        android:layout_height   ="wrap_content">
+
+        <LinearLayout
+            android:layout_width    ="match_parent"
+            android:layout_height   ="wrap_content"
+            android:orientation     ="vertical">
+
+            <ImageView
+                android:layout_width    ="match_parent"
+                android:layout_height   ="100dp"
+                android:src             ="@drawable/side_menu_image"
+                android:scaleType       ="fitXY"/>
+
+            <View
+                android:layout_width    ="match_parent"
+                android:layout_height   ="1dp"
+                android:background      ="@android:color/white"/>
+
+            <LinearLayout
+                android:id              ="@+id/live_layout"
+                android:layout_width    ="match_parent"
+                android:layout_height   ="50dp"
+                android:gravity         ="center_vertical"
+                android:background      ="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width    ="52dp"
+                    android:layout_height   ="52dp"
+                    android:padding         ="16dp"
+                    android:src             ="@drawable/bus_icon"/>
+
+                <TextView
+                    android:layout_width    ="wrap_content"
+                    android:layout_height   ="wrap_content"
+                    android:text            ="В реално време"
+                    android:textColor       ="@android:color/white"
+                    android:textSize        ="18sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width    ="match_parent"
+                android:layout_height   ="1dp"
+                android:background      ="@android:color/white"/>
+
+            <LinearLayout
+                android:id              ="@+id/schedules_layout"
+                android:layout_width    ="match_parent"
+                android:layout_height   ="50dp"
+                android:gravity         ="center_vertical"
+                android:background      ="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width    ="52dp"
+                    android:layout_height   ="52dp"
+                    android:padding         ="16dp"
+                    android:src             ="@drawable/schedules_icon"/>
+
+                <TextView
+                    android:layout_width    ="wrap_content"
+                    android:layout_height   ="wrap_content"
+                    android:text            ="Разписания"
+                    android:textColor       ="@android:color/white"
+                    android:textSize        ="18sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width    ="match_parent"
+                android:layout_height   ="1dp"
+                android:background      ="@android:color/white"/>
+
+            <LinearLayout
+                android:id              ="@+id/points_and_prices_layout"
+                android:layout_width    ="match_parent"
+                android:layout_height   ="50dp"
+                android:gravity         ="center_vertical"
+                android:background      ="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width    ="52dp"
+                    android:layout_height   ="52dp"
+                    android:padding         ="16dp"
+                    android:src             ="@drawable/points_and_prices_icon"/>
+
+                <TextView
+                    android:layout_width    ="wrap_content"
+                    android:layout_height   ="wrap_content"
+                    android:text            ="Пунктове и цени"
+                    android:textColor       ="@android:color/white"
+                    android:textSize        ="18sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width    ="match_parent"
+                android:layout_height   ="1dp"
+                android:background      ="@android:color/white"/>
+
+            <LinearLayout
+                android:id              ="@+id/points_and_prices_sub_layout"
+                android:layout_width    ="match_parent"
+                android:layout_height   ="wrap_content"
+                android:orientation     ="vertical"
+                android:visibility      ="gone">
+
+                <TextView
+                    android:id                  ="@+id/card_prices_layout"
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="50dp"
+                    android:text                ="Цени на абонаментни карти"
+                    android:textColor           ="@android:color/white"
+                    android:gravity             ="center_vertical"
+                    android:background          ="?android:selectableItemBackground"
+                    android:layout_marginLeft   ="52dp"
+                    android:layout_marginRight  ="16dp"/>
+
+                <View
+                    android:layout_width    ="match_parent"
+                    android:layout_height   ="1dp"
+                    android:background      ="@android:color/white"/>
+
+                <TextView
+                    android:id                  ="@+id/points_for_sales_layout"
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="50dp"
+                    android:text                ="Пунктове за продажба на карти"
+                    android:textColor           ="@android:color/white"
+                    android:gravity             ="center_vertical"
+                    android:background          ="?android:selectableItemBackground"
+                    android:layout_marginLeft   ="52dp"
+                    android:layout_marginRight  ="16dp"/>
+
+                <View
+                    android:layout_width    ="match_parent"
+                    android:layout_height   ="1dp"
+                    android:background      ="@android:color/white"/>
+
+                <TextView
+                    android:id                  ="@+id/transport_documents_layout"
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="50dp"
+                    android:text                ="Превозни документи"
+                    android:textColor           ="@android:color/white"
+                    android:gravity             ="center_vertical"
+                    android:background          ="?android:selectableItemBackground"
+                    android:layout_marginLeft   ="52dp"
+                    android:layout_marginRight  ="16dp"/>
+
+                <View
+                    android:layout_width    ="match_parent"
+                    android:layout_height   ="1dp"
+                    android:background      ="@android:color/white"/>
+
+                <TextView
+                    android:id                  ="@+id/terms_and_conditions_layout"
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="50dp"
+                    android:text                ="Ред и условия за продажба на абонаментни карти"
+                    android:textColor           ="@android:color/white"
+                    android:gravity             ="center_vertical"
+                    android:background          ="?android:selectableItemBackground"
+                    android:layout_marginLeft   ="52dp"
+                    android:layout_marginRight  ="16dp"/>
+
+                <View
+                    android:layout_width    ="match_parent"
+                    android:layout_height   ="1dp"
+                    android:background      ="@android:color/white"/>
+
+                <TextView
+                    android:id                  ="@+id/documents_layout"
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="50dp"
+                    android:text                ="Документи"
+                    android:textColor           ="@android:color/white"
+                    android:gravity             ="center_vertical"
+                    android:background          ="?android:selectableItemBackground"
+                    android:layout_marginLeft   ="52dp"
+                    android:layout_marginRight  ="16dp"/>
+
+                <View
+                    android:layout_width    ="match_parent"
+                    android:layout_height   ="1dp"
+                    android:background      ="@android:color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id              ="@+id/complaints_and_signals_layout"
+                android:layout_width    ="match_parent"
+                android:layout_height   ="50dp"
+                android:gravity         ="center_vertical"
+                android:background      ="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width    ="52dp"
+                    android:layout_height   ="52dp"
+                    android:padding         ="16dp"
+                    android:src             ="@drawable/complaints_and_signals_icon"/>
+
+                <TextView
+                    android:layout_width    ="wrap_content"
+                    android:layout_height   ="wrap_content"
+                    android:text            ="Жалби и сигнали"
+                    android:textColor       ="@android:color/white"
+                    android:textSize        ="18sp"/>
+
+                </LinearLayout>
+
+            <View
+                android:layout_width    ="match_parent"
+                android:layout_height   ="1dp"
+                android:background      ="@android:color/white"/>
+
+            <LinearLayout
+                android:id              ="@+id/for_us_layout"
+                android:layout_width    ="match_parent"
+                android:layout_height   ="50dp"
+                android:gravity         ="center_vertical"
+                android:background      ="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width    ="52dp"
+                    android:layout_height   ="52dp"
+                    android:padding         ="16dp"
+                    android:src             ="@drawable/for_us_icon"/>
+
+                <TextView
+                    android:layout_width    ="wrap_content"
+                    android:layout_height   ="wrap_content"
+                    android:text            ="За нас"
+                    android:textColor       ="@android:color/white"
+                    android:textSize        ="18sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width    ="match_parent"
+                android:layout_height   ="1dp"
+                android:background      ="@android:color/white"/>
+
+            <LinearLayout
+                android:id              ="@+id/for_us_sub_layout"
+                android:layout_width    ="match_parent"
+                android:layout_height   ="wrap_content"
+                android:orientation     ="vertical"
+                android:visibility      ="gone">
+
+                <TextView
+                    android:id                  ="@+id/sertificats_layout"
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="50dp"
+                    android:text                ="Сертификати"
+                    android:textColor           ="@android:color/white"
+                    android:gravity             ="center_vertical"
+                    android:background          ="?android:selectableItemBackground"
+                    android:layout_marginLeft   ="52dp"
+                    android:layout_marginRight  ="16dp"/>
+
+                <View
+                    android:layout_width    ="match_parent"
+                    android:layout_height   ="1dp"
+                    android:background      ="@android:color/white"/>
+
+                <TextView
+                    android:id                  ="@+id/history_layout"
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="50dp"
+                    android:text                ="История"
+                    android:textColor           ="@android:color/white"
+                    android:gravity             ="center_vertical"
+                    android:background          ="?android:selectableItemBackground"
+                    android:layout_marginLeft   ="52dp"
+                    android:layout_marginRight  ="16dp"/>
+
+                <View
+                    android:layout_width    ="match_parent"
+                    android:layout_height   ="1dp"
+                    android:background      ="@android:color/white"/>
+
+                <TextView
+                    android:id                  ="@+id/careers_layout"
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="50dp"
+                    android:text                ="Кариери"
+                    android:textColor           ="@android:color/white"
+                    android:gravity             ="center_vertical"
+                    android:background          ="?android:selectableItemBackground"
+                    android:layout_marginLeft   ="52dp"
+                    android:layout_marginRight  ="16dp"/>
+
+                <View
+                    android:layout_width    ="match_parent"
+                    android:layout_height   ="1dp"
+                    android:background      ="@android:color/white"/>
+
+                <TextView
+                    android:id                  ="@+id/adversting_layout"
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="50dp"
+                    android:text                ="За реклама"
+                    android:textColor           ="@android:color/white"
+                    android:gravity             ="center_vertical"
+                    android:background          ="?android:selectableItemBackground"
+                    android:layout_marginLeft   ="52dp"
+                    android:layout_marginRight  ="16dp"/>
+
+                <View
+                    android:layout_width    ="match_parent"
+                    android:layout_height   ="1dp"
+                    android:background      ="@android:color/white"/>
+
+                <TextView
+                    android:id                  ="@+id/gallery_layout"
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="50dp"
+                    android:text                ="Галерии"
+                    android:textColor           ="@android:color/white"
+                    android:gravity             ="center_vertical"
+                    android:background          ="?android:selectableItemBackground"
+                    android:layout_marginLeft   ="52dp"
+                    android:layout_marginRight  ="16dp"/>
+
+                <View
+                    android:layout_width    ="match_parent"
+                    android:layout_height   ="1dp"
+                    android:background      ="@android:color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

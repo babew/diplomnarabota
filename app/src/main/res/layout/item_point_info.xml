@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android           ="http://schemas.android.com/apk/res/android"
+    android:orientation     ="vertical"
+    android:layout_width    ="match_parent"
+    android:layout_height   ="match_parent">
+
+    <LinearLayout
+        android:id              ="@+id/info_layout"
+        android:layout_width    ="match_parent"
+        android:layout_height   ="wrap_content"
+        android:orientation     ="vertical">
+
+        <LinearLayout
+            android:layout_width    ="match_parent"
+            android:layout_height   ="wrap_content"
+            android:orientation     ="horizontal"
+            android:padding         ="8dp">
+
+            <TextView
+                android:layout_width        ="wrap_content"
+                android:layout_height       ="wrap_content"
+                android:text                ="Адрес: "
+                android:layout_marginRight  ="8dp"
+                android:gravity             ="center_vertical"/>
+
+            <TextView
+                android:id              ="@+id/address_text_view"
+                android:layout_width    ="0dp"
+                android:layout_height   ="wrap_content"
+                android:layout_weight   ="1"
+                android:gravity         ="right|center_vertical"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width    ="match_parent"
+            android:layout_height   ="1dp"
+            android:background      ="@android:color/black"/>
+
+        <TextView
+            android:layout_width    ="match_parent"
+            android:layout_height   ="wrap_content"
+            android:text            ="Работно време"
+            android:textColor       ="@android:color/black"
+            android:textStyle       ="bold"
+            android:gravity         ="center"
+            android:padding         ="8dp"/>
+
+        <View
+            android:layout_width    ="match_parent"
+            android:layout_height   ="1dp"
+            android:background      ="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_width    ="match_parent"
+            android:layout_height   ="wrap_content"
+            android:orientation     ="horizontal"
+            android:padding         ="8dp">
+
+            <TextView
+                android:layout_width        ="wrap_content"
+                android:layout_height       ="wrap_content"
+                android:text                ="Делник: "
+                android:layout_marginRight  ="8dp"
+                android:gravity             ="center_vertical"/>
+
+            <TextView
+                android:id              ="@+id/weekday_work_time_text_view"
+                android:layout_width    ="0dp"
+                android:layout_height   ="wrap_content"
+                android:layout_weight   ="1"
+                android:gravity         ="right|center_vertical"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width    ="match_parent"
+            android:layout_height   ="1dp"
+            android:background      ="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_width    ="match_parent"
+            android:layout_height   ="wrap_content"
+            android:orientation     ="horizontal"
+            android:padding         ="8dp">
+
+            <TextView
+                android:layout_width        ="wrap_content"
+                android:layout_height       ="wrap_content"
+                android:text                ="Почивка: "
+                android:layout_marginRight  ="8dp"
+                android:gravity             ="center_vertical"/>
+
+            <TextView
+                android:id              ="@+id/weekday_break_time_text_view"
+                android:layout_width    ="0dp"
+                android:layout_height   ="wrap_content"
+                android:layout_weight   ="1"
+                android:gravity         ="right|center_vertical"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width    ="match_parent"
+            android:layout_height   ="1dp"
+            android:background      ="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_width    ="match_parent"
+            android:layout_height   ="wrap_content"
+            android:orientation     ="horizontal"
+            android:padding         ="8dp">
+
+            <TextView
+                android:layout_width        ="wrap_content"
+                android:layout_height       ="wrap_content"
+                android:text                ="Събота: "
+                android:layout_marginRight  ="8dp"
+                android:gravity             ="center_vertical"/>
+
+            <TextView
+                android:id              ="@+id/saturday_work_time_text_view"
+                android:layout_width    ="0dp"
+                android:layout_height   ="wrap_content"
+                android:layout_weight   ="1"
+                android:gravity         ="right|center_vertical"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width    ="match_parent"
+            android:layout_height   ="1dp"
+            android:background      ="@android:color/black"/>
+
+        <LinearLayout
+            android:id              ="@+id/saturday_break_time_layout"
+            android:layout_width    ="match_parent"
+            android:layout_height   ="wrap_content"
+            android:orientation     ="horizontal"
+            android:padding         ="8dp">
+
+            <TextView
+                android:layout_width        ="wrap_content"
+                android:layout_height       ="wrap_content"
+                android:text                ="Почивка: "
+                android:layout_marginRight  ="8dp"
+                android:gravity             ="center_vertical"/>
+
+            <TextView
+                android:id              ="@+id/saturday_break_time_text_view"
+                android:layout_width    ="0dp"
+                android:layout_height   ="wrap_content"
+                android:layout_weight   ="1"
+                android:gravity         ="right|center_vertical"/>
+
+        </LinearLayout>
+
+        <View
+            android:id              ="@+id/saturday_break_time_separator"
+            android:layout_width    ="match_parent"
+            android:layout_height   ="1dp"
+            android:background      ="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_width    ="match_parent"
+            android:layout_height   ="wrap_content"
+            android:orientation     ="horizontal"
+            android:padding         ="8dp">
+
+            <TextView
+                android:layout_width        ="wrap_content"
+                android:layout_height       ="wrap_content"
+                android:text                ="Неделя: "
+                android:layout_marginRight  ="8dp"
+                android:gravity             ="center_vertical"/>
+
+            <TextView
+                android:id              ="@+id/sunday_work_time_text_view"
+                android:layout_width    ="0dp"
+                android:layout_height   ="wrap_content"
+                android:layout_weight   ="1"
+                android:gravity         ="right|center_vertical"/>
+
+        </LinearLayout>
+
+        <View
+            android:id              ="@+id/sunday_separator"
+            android:layout_width    ="match_parent"
+            android:layout_height   ="1dp"
+            android:background      ="@android:color/black"/>
+
+        <LinearLayout
+            android:id              ="@+id/sunday_break_time_layout"
+            android:layout_width    ="match_parent"
+            android:layout_height   ="wrap_content"
+            android:orientation     ="horizontal"
+            android:padding         ="8dp">
+
+            <TextView
+                android:layout_width        ="wrap_content"
+                android:layout_height       ="wrap_content"
+                android:text                ="Почивка: "
+                android:layout_marginRight  ="8dp"
+                android:gravity             ="center_vertical"/>
+
+            <TextView
+                android:id              ="@+id/sunday_break_time_text_view"
+                android:layout_width    ="0dp"
+                android:layout_height   ="wrap_content"
+                android:layout_weight   ="1"
+                android:gravity         ="right|center_vertical"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

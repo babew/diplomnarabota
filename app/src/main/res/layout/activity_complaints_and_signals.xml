@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android           ="http://schemas.android.com/apk/res/android"
+    android:id              ="@+id/root_view"
+    android:orientation     ="vertical"
+    android:layout_width    ="match_parent"
+    android:layout_height   ="match_parent">
+
+    <include
+        android:id  ="@+id/toolbar"
+        layout      ="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width    ="match_parent"
+        android:layout_height   ="wrap_content"
+        android:layout_below    ="@id/toolbar"
+        android:layout_above    ="@+id/send_layout">
+
+        <LinearLayout
+            android:orientation     ="vertical"
+            android:layout_width    ="match_parent"
+            android:layout_height   ="wrap_content"
+            android:gravity         ="center">
+
+            <TextView
+                 android:layout_width    ="match_parent"
+                 android:layout_height   ="wrap_content"
+                 android:textSize        ="12sp"
+                 android:padding         ="8dp"
+                 android:text            ="@string/complaints_and_signals_info_text"/>
+
+            <EditText
+                android:id                  ="@+id/name_edit_text"
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:maxLength           ="30"
+                android:layout_marginLeft   ="16dp"
+                android:layout_marginRight  ="16dp"
+                android:layout_marginTop    ="8dp"
+                android:inputType           ="textCapWords"
+                android:hint                ="Лице за контакт *"
+                android:textSize            ="16sp"/>
+
+            <EditText
+                android:id                  ="@+id/email_edit_text"
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:layout_marginLeft   ="16dp"
+                android:layout_marginRight  ="16dp"
+                android:layout_marginTop    ="8dp"
+                android:inputType           ="textEmailAddress"
+                android:hint                ="Имейл *"
+                android:textSize            ="16sp"/>
+
+            <EditText
+                android:id                  ="@+id/phone_number_edit_text"
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:layout_marginLeft   ="16dp"
+                android:layout_marginRight  ="16dp"
+                android:layout_marginTop    ="8dp"
+                android:inputType           ="phone"
+                android:maxLength           ="20"
+                android:hint                ="Телефон *"
+                android:textSize            ="16sp"/>
+
+            <EditText
+                android:id                  ="@+id/message_edit_text"
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:layout_marginLeft   ="16dp"
+                android:layout_marginRight  ="16dp"
+                android:layout_marginTop    ="8dp"
+                android:inputType           ="textCapSentences"
+                android:scrollbars          ="horizontal"
+                android:hint                ="Съобщение *"
+                android:textSize            ="16sp"/>
+
+            <LinearLayout
+                android:layout_width        ="wrap_content"
+                android:layout_height       ="wrap_content"
+                android:background          ="@drawable/popup_border"
+                android:layout_margin       ="10dp">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id                          ="@+id/send_layout"
+        android:layout_width                ="match_parent"
+        android:layout_height               ="?attr/actionBarSize"
+        android:layout_alignParentBottom    ="true"
+        android:background                  ="@color/colorPrimary">
+
+        <TextView
+            android:id                  ="@+id/send_text_view"
+            android:layout_width        ="match_parent"
+            android:layout_height       ="match_parent"
+            android:text                ="ИЗПРАТИ"
+            android:textColor           ="@android:color/white"
+            android:background          ="?attr/selectableItemBackground"
+            android:gravity             ="center"
+            android:textSize            ="20sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

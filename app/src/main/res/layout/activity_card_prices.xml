@@ -1,0 +1,1967 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android           ="http://schemas.android.com/apk/res/android"
+    android:orientation     ="vertical"
+    android:layout_width    ="match_parent"
+    android:layout_height   ="match_parent">
+
+    <include
+        layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_height   ="match_parent"
+        android:scrollbars      ="horizontal|vertical"
+        android:layout_width    ="match_parent"
+        android:scrollbarStyle  ="outsideInset"
+        android:fillViewport    ="true">
+
+        <LinearLayout
+            android:layout_width    ="match_parent"
+            android:layout_height   ="wrap_content"
+            android:gravity         ="center_horizontal"
+            android:orientation     ="vertical"
+            android:padding         ="10dp">
+
+            <TextView
+                android:layout_width    ="wrap_content"
+                android:layout_height   ="wrap_content"
+                android:text            ="Цени на абонаментни карти за \nвътрещно - градско пътуване"
+                android:textColor       ="@android:color/black"
+                android:gravity         ="center"/>
+
+            <TableLayout
+                android:background          ="@android:color/black"
+                android:layout_width        ="wrap_content"
+                android:layout_height       ="wrap_content"
+                android:layout_marginTop    ="10dp"
+                android:stretchColumns      ="*"
+                android:padding             ="1dp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="№"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Вид абонаментни\nкарти"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="1 месец\n1 линия"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="1 месец\n2 линии"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="за 1 месец\nвсички линии"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="за 3 месеца\n1 линия"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="1"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="учащи"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="21.00 лв."
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="42.00 лв."
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="-"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="2"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="пенсионерски"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="35.00 лв."
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="70.00 лв."
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="-"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="3"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="учащи"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="21.00 лв."
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="42.00 лв."
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="-"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="12sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="цена на билета"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="1.00 лв."
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:background          ="@android:color/black"
+                android:layout_width        ="wrap_content"
+                android:layout_height       ="wrap_content"
+                android:layout_marginTop    ="10dp"
+                android:stretchColumns      ="*"
+                android:padding             ="1dp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="1 учащ за 1 линия"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="1-ви родител за 1 линия"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="2-ри родител за 2 линии"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="21.00 лв."
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="42.00 лв."
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="42.00 лв."
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width    ="wrap_content"
+                android:layout_height   ="wrap_content"
+                android:text            ="Цени на абонаментни за крайградската\nчаст на гр. Варна"
+                android:textColor       ="@android:color/black"
+                android:gravity         ="center"
+                android:layout_margin   ="10dp"/>
+
+            <HorizontalScrollView
+                android:layout_height   ="wrap_content"
+                android:scrollbars      ="horizontal|vertical"
+                android:layout_width    ="wrap_content">
+
+                <TableLayout
+                    android:background      ="@android:color/black"
+                    android:layout_width    ="wrap_content"
+                    android:layout_height   ="wrap_content"
+                    android:stretchColumns  ="*"
+                    android:padding         ="1dp">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="Видове\nкарти"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="с. Звездица,\nс. Каменар"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="Асп-во,\nБоровец"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="Боровец,\nРакитника"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="с.Конст-во,\nСтранджа,\nКантара"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="ВСУ\nКорабостроител"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="Х-л\nЧерноморец"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="КК\nЗл.пясъци"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="А. Свободни карти"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"
+                            android:layout_span     ="8"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="1 месец\n1 линия"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:background      ="@drawable/divider_list"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:text            ="58.00 лв."
+                            android:textSize        ="10sp" />
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:background      ="@drawable/divider_list"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:text            ="58.00 лв."
+                            android:textSize        ="10sp" />
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="63.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="72.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="84.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:text            ="108.00 лв."
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="84.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="Б. Учащи"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"
+                            android:layout_span     ="8"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="1 месец\n1 линия"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="36.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="36.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="39.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="45.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:gravity         ="center"
+                            android:text            ="58.00 лв."
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:gravity         ="center"
+                            android:text            ="67.00 лв."
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:gravity         ="center"
+                            android:text            ="84.00 лв."
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="В. Пенсионери"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"
+                            android:layout_span     ="8"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="1 месец\n1 линия"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="52.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="52.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:background      ="@drawable/divider_list"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:text            ="56.00 лв."
+                            android:textSize        ="10sp" />
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="64.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="84.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="96.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="120.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="Цена на\nбилета"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="1.30 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="1.30 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:background      ="@drawable/divider_list"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:text            ="1.40 лв."
+                            android:textSize        ="10sp" />
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="1.60 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="2.10 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="2.40 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="3.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="Промоционални карти за сезон 2016  до Златни пясъци"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"
+                            android:layout_span     ="8"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="свободни"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="линия 9,\n109\nЖП Гара\nЗл.пясъци"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="Аспарухово-\nЗл.пясъци"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="Галата-\nЗл.пясъци"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="линия 209\nВладиславово\nк.к. ''Зл.пясъци''\nсп. ''Панорама''"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="Варна - сп.\n''Странджа''"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="До ВСУ"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:textColor       ="@android:color/black"
+                            android:textStyle       ="bold"
+                            android:background      ="@drawable/divider_list"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="1 месец"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="90.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="100.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:background      ="@drawable/divider_list"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:text            ="120.00 лв."
+                            android:textSize        ="10sp" />
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="90.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="63.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="84.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="3 месеца"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:background      ="@drawable/divider_list"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp" />
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="250.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:text            ="170.00 лв."
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                        <TextView
+                            android:layout_width    ="wrap_content"
+                            android:layout_height   ="match_parent"
+                            android:gravity         ="center"
+                            android:padding         ="2dp"
+                            android:textSize        ="10sp"
+                            android:background      ="@drawable/divider_list"/>
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width    ="wrap_content"
+                android:layout_height   ="wrap_content"
+                android:text            ="Цени на абонаментни карти за вътрешноградско пътуване за граждани на 65 и повече години"
+                android:textColor       ="@android:color/black"
+                android:gravity         ="center"
+                android:layout_margin   ="10dp"/>
+
+            <TableLayout
+                android:background      ="@android:color/black"
+                android:layout_width    ="wrap_content"
+                android:layout_height   ="wrap_content"
+                android:stretchColumns  ="*"
+                android:padding         ="1dp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Вид карти"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Брой линии"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Цена"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="За 1 месец"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="1 линия"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="2.00 лв."
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="2 линии"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="4.00 лв."
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="За 2 месеца"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="1 линия"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="4.00 лв."
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="2 линии"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="8.00 лв."
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="За 3 месеца"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="1 линия"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="6.00 лв."
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="2 линии"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="12.00 лв."
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width    ="wrap_content"
+                android:layout_height   ="wrap_content"
+                android:text            ="Цени на абонаментни карти за крайградско пътуване за граждани на 65 и повече години"
+                android:textColor       ="@android:color/black"
+                android:gravity         ="center"
+                android:layout_margin   ="10dp"/>
+
+            <TableLayout
+                android:background      ="@android:color/black"
+                android:layout_width    ="wrap_content"
+                android:layout_height   ="wrap_content"
+                android:stretchColumns  ="*"
+                android:padding         ="1dp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Вид карти"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Брой линии"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Цена"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="За 1 месец"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="1 линия"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="5.00 лв."
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="За 2 месеца"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="1 линия"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="10.00 лв."
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="За 3 месеца"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="1 линия"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="15.00 лв."
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width        ="wrap_content"
+                android:layout_height       ="wrap_content"
+                android:text                ="От 01.03.2012г., се предлагат следните абонаментни карти:\n\nКАРТИ- За пътуване в цялата градска мрежа на ''Градски транспорт'' ЕАД, включително линии № 12 и № 148 карти ще се продават в пункт ''Гараж'', в административната сграда на дружеството на ул. ''Тролейна'' № 48. За повече информация - тел. 052/572 - 234"
+                android:textColor           ="@android:color/black"
+                android:textSize            ="10sp"
+                android:layout_marginTop    ="10dp"/>
+
+            <TextView
+                android:layout_width    ="wrap_content"
+                android:layout_height   ="wrap_content"
+                android:text            ="За период от 3 месеца"
+                android:textColor       ="@android:color/black"
+                android:gravity         ="center"
+                android:layout_margin   ="10dp"/>
+
+            <TableLayout
+                android:background      ="@android:color/black"
+                android:layout_width    ="wrap_content"
+                android:layout_height   ="wrap_content"
+                android:stretchColumns  ="*"
+                android:padding         ="1dp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Брой линии"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Цена за единични\nбройки в лв."
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Цена за покупка\nнад 10 броя в лв."
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="1 линия"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="120.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="100.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="2 линии"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="170.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="150.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="Всички линии"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="280.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="250.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width    ="wrap_content"
+                android:layout_height   ="wrap_content"
+                android:text            ="За период от 6 месеца"
+                android:textColor       ="@android:color/black"
+                android:gravity         ="center"
+                android:layout_margin   ="10dp"/>
+
+            <TableLayout
+                android:background      ="@android:color/black"
+                android:layout_width    ="wrap_content"
+                android:layout_height   ="wrap_content"
+                android:stretchColumns  ="*"
+                android:padding         ="1dp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Брой линии"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Цена за единични\nбройки в лв."
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Цена за покупка\nнад 10 броя в лв."
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="1 линия"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="200.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="180.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="2 линии"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="300.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="260.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="Всички линии"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="500.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="450.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width    ="wrap_content"
+                android:layout_height   ="wrap_content"
+                android:text            ="За период от 12 месеца"
+                android:textColor       ="@android:color/black"
+                android:gravity         ="center"
+                android:layout_margin   ="10dp"/>
+
+            <TableLayout
+                android:background      ="@android:color/black"
+                android:layout_width    ="wrap_content"
+                android:layout_height   ="wrap_content"
+                android:stretchColumns  ="*"
+                android:padding         ="1dp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Брой линии"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Цена за единични\nбройки в лв."
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:text            ="Цена за покупка\nнад 10 броя в лв."
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:textSize        ="10sp"
+                        android:textColor       ="@android:color/black"
+                        android:textStyle       ="bold"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="1 линия"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="400.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="350.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="2 линии"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="600.00"
+                        android:textSize        ="10sp"
+                        android:background="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="500.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="Всички линии"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="900.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                    <TextView
+                        android:layout_width    ="wrap_content"
+                        android:layout_height   ="match_parent"
+                        android:gravity         ="center"
+                        android:padding         ="2dp"
+                        android:text            ="850.00"
+                        android:textSize        ="10sp"
+                        android:background      ="@drawable/divider_list"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

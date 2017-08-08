@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gradski.transport.varna">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/gtvarna_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAUcpfxXBUpDBX_80ABs3ca30PrONEHCz4"/>
+
+        <activity android:name=".activities.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.ChooseBusLineActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.ComplaintsAndSignalsActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.CardPricesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.PointsListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.TransportDocumentsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.TermsAndConditionsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.DocumentsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.ImagesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.HistoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.CareersActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.AdvertisingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.ImageZoomActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

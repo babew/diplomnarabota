@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width    ="match_parent"
+        android:layout_height   ="wrap_content">
+
+        <LinearLayout
+            android:layout_width    ="match_parent"
+            android:layout_height   ="wrap_content"
+            android:orientation     ="vertical">
+
+            <TextView
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:layout_margin       ="20dp"
+                android:text                ="Срок за продажба на абонаментни карти"
+                android:textColor           ="@android:color/black"
+                android:textSize            ="16sp"
+                android:gravity             ="center"/>
+
+            <LinearLayout
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:orientation         ="horizontal"
+                android:gravity             ="center_vertical"
+                android:layout_marginLeft   ="10dp"
+                android:layout_marginRight  ="10dp">
+
+                <ImageView
+                    android:layout_width        ="wrap_content"
+                    android:layout_height       ="wrap_content"
+                    android:src                 ="@drawable/dot_icon"/>
+
+                <TextView
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="wrap_content"
+                    android:layout_marginLeft   ="10dp"
+                    android:text                ="От 27 - мо число на предходния месец до 4 - то число на текущия месец се продават редовни абонаментни карти, карти за учащи, студенти редовно обучение /включително докторанти/ и граждани до 67г. , получаващи пенсия за осигурителен стаж и възраст, както и абонаментни карти за пътуване на преференциални цени."/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:orientation         ="horizontal"
+                android:gravity             ="center_vertical"
+                android:layout_marginLeft   ="10dp"
+                android:layout_marginTop    ="10dp"
+                android:layout_marginRight  ="10dp">
+
+                <ImageView
+                    android:layout_width        ="wrap_content"
+                    android:layout_height       ="wrap_content"
+                    android:src                 ="@drawable/dot_icon"/>
+
+                <TextView
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="wrap_content"
+                    android:layout_marginLeft   ="10dp"
+                    android:text                ="От 5 - то до 15 - то число на месеца се продават абонаментни карти за граждани на и над 65 г."/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:layout_margin       ="20dp"
+                android:text                ="Необходими документи"
+                android:textColor           ="@android:color/black"
+                android:textSize            ="16sp"
+                android:gravity             ="center"/>
+
+            <TextView
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:layout_marginLeft   ="10dp"
+                android:layout_marginRight  ="10dp"
+                android:text                ="Съгласно Нарeдба № 2 от 31.03.2006г. за условията и реда за предоставяне на средства за компенсиране на намалените приходи от прилагането на цени за пътуване по автомобилния транспорт, предвидени в нормативни актове за определени категории пътници:"/>
+
+            <LinearLayout
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:orientation         ="horizontal"
+                android:gravity             ="center_vertical"
+                android:layout_marginLeft   ="10dp"
+                android:layout_marginTop    ="10dp"
+                android:layout_marginRight  ="10dp">
+
+                <ImageView
+                    android:layout_width        ="wrap_content"
+                    android:layout_height       ="wrap_content"
+                    android:src                 ="@drawable/dot_icon"/>
+
+                <TextView
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="wrap_content"
+                    android:layout_marginLeft   ="10dp"
+                    android:text                ="Учащи - лична карта и ученически бележник"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:orientation         ="horizontal"
+                android:gravity             ="center_vertical"
+                android:layout_marginLeft   ="10dp"
+                android:layout_marginTop    ="10dp"
+                android:layout_marginRight  ="10dp">
+
+                <ImageView
+                    android:layout_width        ="wrap_content"
+                    android:layout_height       ="wrap_content"
+                    android:src                 ="@drawable/dot_icon"/>
+
+                <TextView
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="wrap_content"
+                    android:layout_marginLeft   ="10dp"
+                    android:text                ="Студенти редовно обучение, включително докторанти - лична карта и студентска книжка със записана текуща учебна година."/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:orientation         ="horizontal"
+                android:gravity             ="center_vertical"
+                android:layout_marginLeft   ="10dp"
+                android:layout_marginTop    ="10dp"
+                android:layout_marginRight  ="10dp">
+
+                <ImageView
+                    android:layout_width        ="wrap_content"
+                    android:layout_height       ="wrap_content"
+                    android:src                 ="@drawable/dot_icon"/>
+
+                <TextView
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="wrap_content"
+                    android:layout_marginLeft   ="10dp"
+                    android:text                ="Лицата, получаващи пенсия по условията на Глава шеста от Кодекса за социалното осигуряване, навършили възрастта по чл.68, ал. 1 - 3 от същия Кодекс - лична карта и пенсионно разпореждане. Имената на лицето, закупило абонаментната карта се отразяват върху нея с подпис на билетния касиер, извършил продажбата."/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:orientation         ="horizontal"
+                android:gravity             ="center_vertical"
+                android:layout_marginLeft   ="10dp"
+                android:layout_marginTop    ="10dp"
+                android:layout_marginRight  ="10dp">
+
+                <ImageView
+                    android:layout_width        ="wrap_content"
+                    android:layout_height       ="wrap_content"
+                    android:src                 ="@drawable/dot_icon"/>
+
+                <TextView
+                    android:layout_width        ="match_parent"
+                    android:layout_height       ="wrap_content"
+                    android:layout_marginLeft   ="10dp"
+                    android:text                ="Лицата над 67г. - лична карта, снимка и заявка от кметствата по местоживеене."/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width        ="match_parent"
+                android:layout_height       ="wrap_content"
+                android:layout_margin       ="10dp"
+                android:text                ="Съгласно чл.17 ал.2 от гореспоменатата Наредба, Дружеството води регистър за издадените карти, съдържащ трите имена и подпис на лицето, номер на издадената карта, наименование на учебното заведение и общината, в която се намира то /за учениците, студентите и докторантите/, а за гражданите получаващи пенсия за осигурителен стаж и възраст - общината по местоживеене.
+
+Продажбата на абонаментни карти от ''Градски транспорт'' ЕАД се осъществява при спазване на нормативните разпоредби на Закона за защита на личните данни.
+
+Дружеството обслужва надлежно всички клиенти и изисква на гражданите от 65 до 67 навършени години пенсионно разпореждане, като гражданите няма да бъдат връщани."/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
