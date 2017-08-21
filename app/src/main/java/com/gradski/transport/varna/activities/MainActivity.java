@@ -2,6 +2,7 @@ package com.gradski.transport.varna.activities;
 
 import android.content.Intent;
 import android.os.Handler;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -26,13 +27,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private static final int FRAGMENT_ROUTE_CHANGES     = 2;
     private static final int TABS_COUNT                 = 3;
 
-    private DrawerLayout    mDrawer;
-    private TabLayout       mTabLayout;
-    private ViewPager       mViewPager;
-    private LinearLayout    mPointersAndPricesSubLayout;
-    private LinearLayout    mForUsSubLayout;
-    private RevealLayout    mRevealLayout;
-    private View            mRevealView;
+    private DrawerLayout            mDrawer;
+    private TabLayout               mTabLayout;
+    private ViewPager               mViewPager;
+    private LinearLayout            mPointersAndPricesSubLayout;
+    private LinearLayout            mForUsSubLayout;
+    private RevealLayout            mRevealLayout;
+    private View                    mRevealView;
+    private FloatingActionButton    mFab;
 
     private NewsFragment            mNewsFragment;
     private ImportantFragment       mImportantFragment;
@@ -50,13 +52,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     private void init() {
-        mDrawer                     = (DrawerLayout)    findViewById(R.id.drawer_layout);
-        mTabLayout                  = (TabLayout)       findViewById(R.id.tab_layout);
-        mViewPager                  = (ViewPager)       findViewById(R.id.view_pager);
-        mPointersAndPricesSubLayout = (LinearLayout)    findViewById(R.id.points_and_prices_sub_layout);
-        mForUsSubLayout             = (LinearLayout)    findViewById(R.id.for_us_sub_layout);
-        mRevealLayout               = (RevealLayout)    findViewById(R.id.reveal_layout);
-        mRevealView                 =                   findViewById(R.id.reveal_layout_view);
+        mDrawer                     = (DrawerLayout)            findViewById(R.id.drawer_layout);
+        mTabLayout                  = (TabLayout)               findViewById(R.id.tab_layout);
+        mViewPager                  = (ViewPager)               findViewById(R.id.view_pager);
+        mPointersAndPricesSubLayout = (LinearLayout)            findViewById(R.id.points_and_prices_sub_layout);
+        mForUsSubLayout             = (LinearLayout)            findViewById(R.id.for_us_sub_layout);
+        mRevealLayout               = (RevealLayout)            findViewById(R.id.reveal_layout);
+        mRevealView                 =                           findViewById(R.id.reveal_layout_view);
+        mFab                        = (FloatingActionButton)    findViewById(R.id.bus_fab);
 
         setDrawerListener();
         setViewPagerAdapter();
@@ -84,6 +87,26 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(pagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if (positionOffsetPixels > 0 && mFab.isShown())
+                    mFab.hide();
+                else if (positionOffsetPixels == 0)
+                    mFab.show();
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     private void setOnClickListeners() {
@@ -238,7 +261,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             mDrawer.closeDrawer(findViewById(R.id.drawer_view));
             startImagesActivity(true);
         } else if (v.getId() == R.id.bus_fab) {
-            startRevealAnimation(findViewById(R.id.bus_fab));
+            startRevealAnimation(mFab);
         }
     }
 

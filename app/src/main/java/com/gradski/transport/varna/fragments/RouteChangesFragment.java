@@ -2,6 +2,7 @@ package com.gradski.transport.varna.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -25,6 +26,7 @@ public class RouteChangesFragment extends BaseFragment {
     private LinearLayoutManager             mLinearLayoutManager;
     private RouteChangesRecyclerAdapter     mAdapter;
     private ArrayList<RouteChange>          mRouteChangesArrayList = new ArrayList<>();
+    private FloatingActionButton            mFab;
 
     @Nullable
     @Override
@@ -48,8 +50,18 @@ public class RouteChangesFragment extends BaseFragment {
         mRecyclerView           = (RecyclerView) mView.findViewById(R.id.recycler_view);
         mLinearLayoutManager    = new LinearLayoutManager(getActivity());
         mAdapter                = new RouteChangesRecyclerAdapter(mRouteChangesArrayList);
+        mFab                    = (FloatingActionButton)    getActivity().findViewById(R.id.bus_fab);
 
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if (dy > 0)
+                    mFab.hide();
+                else
+                    mFab.show();
+            }
+        });
     }
 }

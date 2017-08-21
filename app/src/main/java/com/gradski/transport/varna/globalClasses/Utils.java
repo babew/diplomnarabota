@@ -37,7 +37,6 @@ public class Utils {
     public static final int ROUTE_CHANGE_IMAGE_TYPE_3 = 3;
     public static final int ROUTE_CHANGE_IMAGE_TYPE_4 = 4;
 
-    public static final int IMPORTANT_TEXT_TYPE_TITLE   = 0;
     public static final int IMPORTANT_TEXT_TYPE_MESSAGE = 1;
     public static final int IMPORTANT_TEXT_TYPE_LIST    = 2;
 
