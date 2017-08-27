@@ -28,33 +28,6 @@
                 android:background      ="@android:color/white"/>
 
             <LinearLayout
-                android:id              ="@+id/live_layout"
-                android:layout_width    ="match_parent"
-                android:layout_height   ="50dp"
-                android:gravity         ="center_vertical"
-                android:background      ="?android:attr/selectableItemBackground">
-
-                <ImageView
-                    android:layout_width    ="52dp"
-                    android:layout_height   ="52dp"
-                    android:padding         ="16dp"
-                    android:src             ="@drawable/bus_icon"/>
-
-                <TextView
-                    android:layout_width    ="wrap_content"
-                    android:layout_height   ="wrap_content"
-                    android:text            ="В реално време"
-                    android:textColor       ="@android:color/white"
-                    android:textSize        ="18sp"/>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width    ="match_parent"
-                android:layout_height   ="1dp"
-                android:background      ="@android:color/white"/>
-
-            <LinearLayout
                 android:id              ="@+id/schedules_layout"
                 android:layout_width    ="match_parent"
                 android:layout_height   ="50dp"
@@ -71,6 +44,33 @@
                     android:layout_width    ="wrap_content"
                     android:layout_height   ="wrap_content"
                     android:text            ="Разписания"
+                    android:textColor       ="@android:color/white"
+                    android:textSize        ="18sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width    ="match_parent"
+                android:layout_height   ="1dp"
+                android:background      ="@android:color/white"/>
+
+            <LinearLayout
+                android:id              ="@+id/stops_layout"
+                android:layout_width    ="match_parent"
+                android:layout_height   ="50dp"
+                android:gravity         ="center_vertical"
+                android:background      ="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width    ="52dp"
+                    android:layout_height   ="52dp"
+                    android:padding         ="16dp"
+                    android:src             ="@drawable/bus_stop_icon"/>
+
+                <TextView
+                    android:layout_width    ="wrap_content"
+                    android:layout_height   ="wrap_content"
+                    android:text            ="Спирки"
                     android:textColor       ="@android:color/white"
                     android:textSize        ="18sp"/>
 

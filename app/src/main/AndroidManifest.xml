@@ -40,6 +40,12 @@
         </activity>
         <activity android:name=".activities.ChooseBusLineActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activities.BusLiveActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.SchedulesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.BusStopsActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".activities.ComplaintsAndSignalsActivity"
             android:windowSoftInputMode="stateHidden"
             android:screenOrientation="portrait"/>

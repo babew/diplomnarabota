@@ -85,6 +85,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private void setViewPagerAdapter() {
         PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
+        mViewPager.setOffscreenPageLimit(TABS_COUNT);
         mViewPager.setAdapter(pagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -111,7 +112,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private void setOnClickListeners() {
         findViewById(R.id.menu_image_view).setOnClickListener(this);
-        findViewById(R.id.live_layout).setOnClickListener(this);
         findViewById(R.id.schedules_layout).setOnClickListener(this);
         findViewById(R.id.points_and_prices_layout).setOnClickListener(this);
         findViewById(R.id.complaints_and_signals_layout).setOnClickListener(this);
@@ -119,6 +119,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.card_prices_layout).setOnClickListener(this);
         findViewById(R.id.points_for_sales_layout).setOnClickListener(this);
         findViewById(R.id.transport_documents_layout).setOnClickListener(this);
+        findViewById(R.id.stops_layout).setOnClickListener(this);
         findViewById(R.id.terms_and_conditions_layout).setOnClickListener(this);
         findViewById(R.id.documents_layout).setOnClickListener(this);
         findViewById(R.id.sertificats_layout).setOnClickListener(this);
@@ -152,7 +153,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             Utils.startCollapseAnimation(mForUsSubLayout);
     }
 
-    private void startRevealAnimation (View animatedView) {
+    private void startRevealAnimation (View animatedView, boolean isForLive) {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE, WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
 
         int     animationDuration           = 400;
@@ -167,6 +168,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         final Intent intent = new Intent(MainActivity.this, ChooseBusLineActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        intent.putExtra(Utils.INTENT_EXTRA_IS_FOR_LIVE, isForLive);
         mRevealLayout.setVisibility(View.VISIBLE);
         mRevealView.setVisibility(View.VISIBLE);
         mRevealLayout.show(mFromWidth, mFromHeight);
@@ -209,10 +211,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 mDrawer.closeDrawer(findViewById(R.id.drawer_view));
             else
                 mDrawer.openDrawer(findViewById(R.id.drawer_view));
-        } else if (v.getId() == R.id.live_layout) {
-            startRevealAnimation(findViewById(R.id.live_layout));
         } else if (v.getId() == R.id.schedules_layout) {
-            startRevealAnimation(findViewById(R.id.schedules_layout));
+            Intent intent = new Intent(MainActivity.this, ChooseBusLineActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            intent.putExtra(Utils.INTENT_EXTRA_IS_FOR_LIVE, false);
+            startActivity(intent);
         } else if (v.getId() == R.id.points_and_prices_layout) {
             showOrHideSubLayout(false);
         } else if (v.getId() == R.id.complaints_and_signals_layout) {
@@ -232,6 +235,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             mPointersAndPricesSubLayout.setVisibility(View.GONE);
             mDrawer.closeDrawer(findViewById(R.id.drawer_view));
             startActivityFromDrawer(TransportDocumentsActivity.class);
+        } else if (v.getId() == R.id.stops_layout) {
+            Intent intent = new Intent(this, BusStopsActivity.class);
+            startActivity(intent);
         } else if (v.getId() == R.id.terms_and_conditions_layout) {
             mPointersAndPricesSubLayout.setVisibility(View.GONE);
             mDrawer.closeDrawer(findViewById(R.id.drawer_view));
@@ -261,7 +267,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             mDrawer.closeDrawer(findViewById(R.id.drawer_view));
             startImagesActivity(true);
         } else if (v.getId() == R.id.bus_fab) {
-            startRevealAnimation(mFab);
+            startRevealAnimation(mFab, true);
         }
     }
 

@@ -31,7 +31,7 @@ public class RouteChangesFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.fragment_route_changes, container, false);
+        mView = inflater.inflate(R.layout.fragment_with_recycler_view, container, false);
 
         mRouteChangesArrayList.add(new RouteChange(0, 0, "Допълнителен курс на 118А от 10.07.2017 г.", "Считано от 10.07.2017 г., курс в 06:24 от Почивка ще обслужва през Гробищен парк, запазва се курса в 07:25 от Тополи.Важи само за делнично разписание.Считано от 10.07.2017 г., курс в 06:24 от Почивка ще обслужва през Гробищен парк, запазва се курса в 07:25 от Тополи.Важи само за делнично разписание.Считано от 10.07.2017 г., курс в 06:24 от Почивка ще обслужва през Гробищен парк, запазва се курса в 07:25 от Тополи.Важи само за делнично разписание."));
         mRouteChangesArrayList.add(new RouteChange(0, 0, "Допълнителен курс на 118А от 10.07.2017 г.", "Считано от 10.07.2017 г., курс в 06:24 от Почивка ще обслужва през Гробищен парк, запазва се курса в 07:25 от Тополи.Важи само за делнично разписание."));

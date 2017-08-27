@@ -16,7 +16,8 @@ import com.gradski.transport.varna.models.ImportantText;
  */
 
 public class Utils {
-    public static final String INTENT_EXTRA_IS_FOR_LIVE = "is_for_live";
+    public static final String INTENT_EXTRA_IS_FOR_LIVE     = "is_for_live";
+    public static final String INTENT_EXTRA_BUS_LINE_NUMBER = "bus_line_number";
 
     public static final int REQUEST_CODE_BUS_LINE = 0;
 
@@ -30,6 +31,8 @@ public class Utils {
     public static final String INTENT_EXTRA_IS_FOR_GALLERY          = "is_for_gallery";
     public static final String INTENT_EXTRA_START_IMAGE_POSITION    = "start_image_position";
     public static final String INTENT_EXTRA_CURRENT_IMAGE_POSITION  = "current_image_position";
+    public static final String INTENT_EXTRA_ONE_WAY_BUS_SCHEDULE    = "one_way_bus_schedule";
+    public static final String INTENT_EXTRA_OTHER_WAY_BUS_SCHEDULE  = "other_way_bus_schedule";
 
     public static final int ROUTE_CHANGE_IMAGE_TYPE_0 = 0;
     public static final int ROUTE_CHANGE_IMAGE_TYPE_1 = 1;

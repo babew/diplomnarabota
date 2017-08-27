@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android           ="http://schemas.android.com/apk/res/android"
+    android:orientation     ="vertical"
+    android:layout_width    ="match_parent"
+    android:layout_height   ="wrap_content"
+    android:background      ="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width    ="match_parent"
+        android:layout_height   ="wrap_content"
+        android:orientation     ="horizontal">
+
+        <View
+            android:id                  ="@+id/top_line_view"
+            android:layout_width        ="1dp"
+            android:layout_height       ="10dp"
+            android:background          ="@android:color/white"
+            android:layout_marginLeft   ="19.5dp"
+            android:layout_marginRight  ="20dp"/>
+
+        <LinearLayout
+            android:id                  ="@+id/stop_layout"
+            android:layout_width        ="match_parent"
+            android:layout_height       ="wrap_content"
+            android:orientation         ="horizontal"
+            android:gravity             ="center_vertical"
+            android:layout_marginLeft   ="10dp"
+            android:layout_marginRight  ="10dp"
+            android:layout_below        ="@+id/top_line_view">
+
+            <ImageView
+                android:id              ="@+id/circle_image_view"
+                android:layout_width    ="20dp"
+                android:layout_height   ="20dp"
+                android:src             ="@drawable/circle_drawable"/>
+
+            <TextView
+                android:id                  ="@+id/stop_name_text_view"
+                android:layout_width        ="0dp"
+                android:layout_height       ="wrap_content"
+                android:layout_weight       ="1"
+                android:text                ="ПОЧИВКА/Обръщач/"
+                android:textColor           ="@android:color/white"
+                android:layout_marginLeft   ="10dp"/>
+
+            <TextView
+                android:id                      ="@+id/time_text_view"
+                android:layout_width            ="wrap_content"
+                android:layout_height           ="wrap_content"
+                android:text                    ="ПОЧИВКА/Обръщач/"
+                android:textColor               ="@android:color/white"
+                android:layout_marginRight      ="10dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:id                  ="@+id/bottom_line_view"
+            android:layout_width        ="1dp"
+            android:layout_height       ="10dp"
+            android:background          ="@android:color/white"
+            android:layout_below        ="@id/stop_layout"
+            android:layout_marginLeft   ="19.5dp"
+            android:layout_marginRight  ="20dp"
+            android:layout_alignBottom  ="@+id/card_views_container"/>
+
+        <LinearLayout
+            android:id                      ="@+id/card_views_container"
+            android:layout_width            ="wrap_content"
+            android:layout_height           ="wrap_content"
+            android:layout_below            ="@+id/stop_layout"
+            android:layout_toRightOf        ="@+id/bottom_line_view"
+            android:visibility              ="gone"
+            android:orientation             ="vertical"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

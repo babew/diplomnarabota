@@ -12,6 +12,7 @@ import android.view.ViewTreeObserver;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+import com.gradski.transport.varna.BuildConfig;
 import com.gradski.transport.varna.R;
 import com.gradski.transport.varna.adapters.ImagesGridAdapter;
 import com.gradski.transport.varna.globalClasses.Utils;
@@ -33,45 +34,14 @@ public class ImagesActivity extends BaseActivity implements View.OnClickListener
 
     private Bundle      mTmpReenterState;
     private boolean     mIsDetailsActivityStarted;
-    private final       SharedElementCallback mCallback = new SharedElementCallback() {
-        @Override
-        public void onMapSharedElements(List<String> names, Map<String, View> sharedElements) {
-            if (mTmpReenterState != null) {
-                int startingPosition = mTmpReenterState.getInt(Utils.INTENT_EXTRA_START_IMAGE_POSITION);
-                int currentPosition = mTmpReenterState.getInt(Utils.INTENT_EXTRA_CURRENT_IMAGE_POSITION);
-                if (startingPosition != currentPosition) {
-                    String newTransitionName = mImagesArrayList.get(currentPosition).toString();
-                    View newSharedElement = mGridView.findViewWithTag(newTransitionName);
-                    if (newSharedElement != null) {
-                        names.clear();
-                        names.add(newTransitionName);
-                        sharedElements.clear();
-                        sharedElements.put(newTransitionName, newSharedElement);
-                    }
-                }
-
-                mTmpReenterState = null;
-            } else {
-                View navigationBar  = findViewById(android.R.id.navigationBarBackground);
-                View statusBar      = findViewById(android.R.id.statusBarBackground);
-                if (navigationBar != null) {
-                    names.add(navigationBar.getTransitionName());
-                    sharedElements.put(navigationBar.getTransitionName(), navigationBar);
-                }
-                if (statusBar != null) {
-                    names.add(statusBar.getTransitionName());
-                    sharedElements.put(statusBar.getTransitionName(), statusBar);
-                }
-            }
-        }
-    };
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_certificates);
-        setExitSharedElementCallback(mCallback);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            setExitSharedElementCallback(createSharedCallback());
 
         init();
     }
@@ -92,13 +62,18 @@ public class ImagesActivity extends BaseActivity implements View.OnClickListener
         if (startingPosition != currentPosition)
             mGridView.setSelection(currentPosition);
 
-        postponeEnterTransition();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            postponeEnterTransition();
+
         mGridView.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
             @Override
             public boolean onPreDraw() {
                 mGridView.getViewTreeObserver().removeOnPreDrawListener(this);
                 mGridView.requestLayout();
-                startPostponedEnterTransition();
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+                    startPostponedEnterTransition();
+
                 return true;
             }
         });
@@ -124,17 +99,52 @@ public class ImagesActivity extends BaseActivity implements View.OnClickListener
         findViewById(R.id.back_arrow_image_view).setOnClickListener(this);
     }
 
+    private SharedElementCallback createSharedCallback() {
+        SharedElementCallback sharedElementCallback = new SharedElementCallback() {
+            @Override
+            public void onMapSharedElements(List<String> names, Map<String, View> sharedElements) {
+                if (mTmpReenterState != null) {
+                    int startingPosition = mTmpReenterState.getInt(Utils.INTENT_EXTRA_START_IMAGE_POSITION);
+                    int currentPosition = mTmpReenterState.getInt(Utils.INTENT_EXTRA_CURRENT_IMAGE_POSITION);
+                    if (startingPosition != currentPosition) {
+                        String newTransitionName = mImagesArrayList.get(currentPosition).toString();
+                        View newSharedElement = mGridView.findViewWithTag(newTransitionName);
+                        if (newSharedElement != null) {
+                            names.clear();
+                            names.add(newTransitionName);
+                            sharedElements.clear();
+                            sharedElements.put(newTransitionName, newSharedElement);
+                        }
+                    }
+
+                    mTmpReenterState = null;
+                } else {
+                    View navigationBar  = findViewById(android.R.id.navigationBarBackground);
+                    View statusBar      = findViewById(android.R.id.statusBarBackground);
+                    if (navigationBar != null) {
+                        names.add(navigationBar.getTransitionName());
+                        sharedElements.put(navigationBar.getTransitionName(), navigationBar);
+                    }
+                    if (statusBar != null) {
+                        names.add(statusBar.getTransitionName());
+                        sharedElements.put(statusBar.getTransitionName(), statusBar);
+                    }
+                }
+            }
+        };
+        return sharedElementCallback;
+    }
+
     private void startImageZoomActivity(int position, View transitionView) {
         Intent intent = new Intent(this, ImageZoomActivity.class);
         intent.putIntegerArrayListExtra(Utils.INTENT_EXTRA_IMAGES_LIST, mImagesArrayList);
         intent.putExtra(Utils.INTENT_EXTRA_IMAGE_POSITION, position);
         if (!mIsDetailsActivityStarted) {
             mIsDetailsActivityStarted = true;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
                 startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(ImagesActivity.this, transitionView, transitionView.getTransitionName()).toBundle());
-            } else {
+            else
                 startActivity(intent);
-            }
         }
     }
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android           ="http://schemas.android.com/apk/res/android"
+    android:orientation     ="vertical"
+    android:layout_width    ="match_parent"
+    android:layout_height   ="match_parent"
+    android:weightSum       ="2">
+
+    <include layout="@layout/toolbar_map"/>
+
+    <fragment
+        android:id              ="@+id/map_fragment"
+        android:name            ="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width    ="match_parent"
+        android:layout_height   ="0dp"
+        android:layout_weight   ="1"/>
+
+    <LinearLayout
+        android:layout_width    ="match_parent"
+        android:layout_height   ="0dp"
+        android:layout_weight   ="1"
+        android:background      ="@color/colorPrimary">
+
+        <ListView
+            android:id                      ="@+id/list_view"
+            android:layout_width            ="match_parent"
+            android:layout_height           ="match_parent"
+            android:divider                 ="@null"
+            android:dividerHeight           ="0dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

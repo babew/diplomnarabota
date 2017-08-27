@@ -1,22 +1,20 @@
 package com.gradski.transport.varna.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
 import android.view.View;
-import android.view.ViewTreeObserver;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.GridView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.gradski.transport.varna.R;
 import com.gradski.transport.varna.adapters.BusLinesAdapter;
+import com.gradski.transport.varna.globalClasses.Utils;
 
 import java.util.ArrayList;
 
@@ -105,7 +103,10 @@ public class ChooseBusLineActivity extends BaseActivity {
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                boolean isForLive = getIntent().getBooleanExtra(Utils.INTENT_EXTRA_IS_FOR_LIVE, false);
+                Intent intent = new Intent(ChooseBusLineActivity.this, isForLive ? BusLiveActivity.class : SchedulesActivity.class);
+                intent.putExtra(Utils.INTENT_EXTRA_BUS_LINE_NUMBER, mBusLinesArrayList.get(position));
+                startActivity(intent);
             }
         });
     }

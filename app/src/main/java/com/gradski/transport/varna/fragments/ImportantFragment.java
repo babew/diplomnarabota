@@ -33,7 +33,7 @@ public class ImportantFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.fragment_important, container, false);
+        mView = inflater.inflate(R.layout.fragment_with_recycler_view, container, false);
 
         getData();
 

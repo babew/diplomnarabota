@@ -39,24 +39,6 @@ public class ImageZoomActivity extends BaseActivity implements View.OnClickListe
     private int mCurrentPosition    = 0;
     private boolean mIsReturning;
 
-    private final SharedElementCallback mCallback = new SharedElementCallback() {
-        @Override
-        public void onMapSharedElements(List<String> names, Map<String, View> sharedElements) {
-            if (mIsReturning) {
-                ImageView sharedElement = mCurrentFragment.getImageView();
-                if (sharedElement == null) {
-                    names.clear();
-                    sharedElements.clear();
-                } else if (mStartingPosition != mViewPager.getCurrentItem()) {
-                    names.clear();
-                    names.add(sharedElement.getTransitionName());
-                    sharedElements.clear();
-                    sharedElements.put(sharedElement.getTransitionName(), sharedElement);
-                }
-            }
-        }
-    };
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,10 +46,31 @@ public class ImageZoomActivity extends BaseActivity implements View.OnClickListe
         setContentView(R.layout.activity_certificates_zoom);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             postponeEnterTransition();
-            setEnterSharedElementCallback(mCallback);
+            setEnterSharedElementCallback(createSharedCallback());
         }
 
         init();
+    }
+
+    private SharedElementCallback createSharedCallback() {
+        SharedElementCallback sharedElementCallback = new SharedElementCallback() {
+            @Override
+            public void onMapSharedElements(List<String> names, Map<String, View> sharedElements) {
+                if (mIsReturning) {
+                    ImageView sharedElement = mCurrentFragment.getImageView();
+                    if (sharedElement == null) {
+                        names.clear();
+                        sharedElements.clear();
+                    } else if (mStartingPosition != mViewPager.getCurrentItem()) {
+                        names.clear();
+                        names.add(sharedElement.getTransitionName());
+                        sharedElements.clear();
+                        sharedElements.put(sharedElement.getTransitionName(), sharedElement);
+                    }
+                }
+            }
+        };
+        return sharedElementCallback;
     }
 
     @Override
