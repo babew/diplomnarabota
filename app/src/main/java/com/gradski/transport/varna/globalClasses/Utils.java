@@ -1,15 +1,11 @@
 package com.gradski.transport.varna.globalClasses;
 
-import android.content.Context;
-import android.util.TypedValue;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.gradski.transport.varna.R;
-import com.gradski.transport.varna.models.ImportantText;
 
 /**
  * Created by lyubomir.babev on 01/06/2017.
