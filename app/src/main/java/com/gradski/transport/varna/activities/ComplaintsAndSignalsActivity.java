@@ -30,8 +30,6 @@ public class ComplaintsAndSignalsActivity extends BaseActivity implements View.O
     private EditText mMessageEditText;
     private TextView mSendTextView;
 
-    private boolean mKeyboardVisible = false;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
